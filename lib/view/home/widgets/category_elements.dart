@@ -5,6 +5,7 @@ import 'package:mahajong/res/components/text_widget.dart';
 import 'package:mahajong/utils/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:mahajong/utils/utils.dart';
 
 class CategoryElement extends StatefulWidget {
   final int selectedCategoryIndex;
@@ -33,6 +34,20 @@ class _CategoryElementState extends State<CategoryElement> {
             Navigator.pushNamed(context, RoutesName.winGoScreen);
         }
       ),
+      LotteryModel(
+          titleText: 'Aviator',
+          subTitleText: ' ',
+          gameText: ' ',
+          decorationImage: Assets.imagesDecorationThird,
+          decoImage: Assets.aviatorAviatornew,
+          member: ' ',
+          memberImage: Assets.aviatorAviator,
+          winAmount: '  ',
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>const GameAviator()));
+          }
+      ),
+
       // LotteryModel(
       //     titleText: 'K3 Lotre',
       //     subTitleText: 'Guess Number',
@@ -51,20 +66,27 @@ class _CategoryElementState extends State<CategoryElement> {
       //     member: 'lxqldcer',
       //     memberImage: Assets.person3,
       //     winAmount: '194.00'),
-      // LotteryModel(
-      //     titleText: 'Trx Win',
-      //     subTitleText: 'Guess Number',
-      //     gameText: 'Green/Red/Purple to win',
-      //     decorationImage: Assets.imagesDecorationThird,
-      //     decoImage: Assets.imagesDecoFour,
-      //     member: 'zsifarlr',
-      //     memberImage: Assets.person4,
-      //     winAmount: '1960.00'),
+      LotteryModel(
+          titleText: 'Trx Win',
+          subTitleText: 'Guess Number',
+          gameText: 'Green/Red/Purple to win',
+          decorationImage: Assets.imagesDecorationThird,
+          decoImage: Assets.imagesDecoFour,
+          member: 'zsifarlr',
+          memberImage: Assets.person4,
+          winAmount: '1960.00',
+       onTap: (){
+            Utils.showImageComming(context);
+           // Navigator.pushNamed(context, RoutesName.winGoScreen);
+    }
+      ),
+
+
     ];
     List<MiniGameModel> miniGameList = [
       MiniGameModel(image: Assets.imagesAviatorFirst,onTap: (){
         // Navigator.pushNamed(context, RoutesName.aviatorGame);
-        Navigator.push(context, MaterialPageRoute(builder: (context)=>GameAviator()));
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>const GameAviator()));
       }),
       // MiniGameModel(image: Assets.imagesMiniDice),
     ];
@@ -166,10 +188,11 @@ class _CategoryElementState extends State<CategoryElement> {
                     ),
                   ),
                   Positioned(
-                      top: 5,
+                      top: 15,
                       right: 10,
                       child: SvgPicture.asset(lotteryList[index].decoImage!,
-                          height: 100)),
+                          height: 80,)),
+
                 ],
               );
             })

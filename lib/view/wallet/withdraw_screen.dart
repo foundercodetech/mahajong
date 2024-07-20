@@ -293,7 +293,7 @@ class _WithdrawScreenState extends State<WithdrawScreen> {
                   children: [
                     instruction(
                         'Only ',
-                        '50% ',
+                        '100% ',
                         'of the winning amount can be withdraw in a day.',
 
 

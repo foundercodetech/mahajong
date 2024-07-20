@@ -4,6 +4,7 @@ class Assets {
 
   static const String aviatorAviator = 'assets/aviator/aviator.png';
   static const String aviatorAviatorText = 'assets/aviator/aviator_text.png';
+  static const String aviatorAviatornew = 'assets/aviator/aviatornew.svg';
   static const String aviatorAviatorwait = 'assets/aviator/aviatorwait.png';
   static const String aviatorBet = 'assets/aviator/bet.png';
   static const String aviatorCancel = 'assets/aviator/cancel.png';
